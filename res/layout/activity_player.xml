@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/music1"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".Player" >
+
+    <SeekBar
+        android:id="@+id/songProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/seek_handler" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnForward"
+        android:layout_toRightOf="@+id/btnForward"
+        android:background="@null"
+        android:src="@drawable/btn_next" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/songProgressBar"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:src="@drawable/btn_play" />
+
+    <ImageButton
+        android:id="@+id/btnBackward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnForward"
+        android:layout_toLeftOf="@+id/btnPlay"
+        android:background="@null"
+        android:src="@drawable/btn_backward" />
+
+    <ImageButton
+        android:id="@+id/btnForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnPlay"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/btnPlay"
+        android:background="@null"
+        android:src="@drawable/btn_forward" />
+
+    <ImageButton
+        android:id="@+id/btnPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnBackward"
+        android:layout_toLeftOf="@+id/btnBackward"
+        android:background="@null"
+        android:src="@drawable/btn_previous" />
+
+    <!-- Shuffle Button -->
+
+    <ImageButton
+        android:id="@+id/btnRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnForward"
+        android:layout_toLeftOf="@+id/btnNext"
+        android:background="@null"
+        android:src="@drawable/btn_repeat" />
+
+    <ImageButton
+        android:id="@+id/btnShuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnBackward"
+        android:layout_alignTop="@+id/btnRepeat"
+        android:background="@null"
+        android:src="@drawable/btn_shuffle" />
+
+    <TextView
+        android:id="@+id/elapsedT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/songProgressBar"
+        android:layout_alignTop="@+id/songProgressBar"
+        android:layout_marginTop="28dp"
+        android:text="time"
+        android:textColor="#4a69bd"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/totalT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/elapsedT"
+        android:layout_alignBottom="@+id/elapsedT"
+        android:layout_alignRight="@+id/songProgressBar"
+        android:text="time"
+        android:textColor="#4a69bd"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+</RelativeLayout>
